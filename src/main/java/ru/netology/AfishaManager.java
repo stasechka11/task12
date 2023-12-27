@@ -25,5 +25,19 @@ public class AfishaManager {
         return moviesArray;
     }
 
+    public Movie[] findLast() {
+        int resultLenght;
+        if (moviesLimit < moviesArray.length) {
+            resultLenght = moviesLimit;
+        } else {
+            resultLenght = moviesArray.length;
+        }
+        Movie[] result = new Movie[resultLenght];
+        for (int i = 0; i < resultLenght; i++) {
+            result[i] = moviesArray[moviesArray.length - 1 - i];
+        }
+        return result;
+    }
+
 
 }
